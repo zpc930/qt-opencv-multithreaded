@@ -93,12 +93,16 @@ LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_vid
 == 2.3 Compiling & running the application ==
 1. Download the latest version of *qt-opencv-multithreaded*: [http://code.google.com/p/qt-opencv-multithreaded/downloads/list Downloads]
 
-2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator.
+2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project targets - modify if required and click "Finish".
 
 3. The application can be now be simply modified, compiled and run within Qt Creator!
 
 = 3. Using the Application =
+Coming soon.
+
 = 4. Modifying the Source =
+Coming soon.
+
 = 5. Hardware =
 Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
 
