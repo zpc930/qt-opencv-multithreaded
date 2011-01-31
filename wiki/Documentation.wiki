@@ -11,6 +11,8 @@
 = 1. Introduction =
 This relatively simple multithreaded application can be easily modified to suit the needs of your next Qt GUI-based computer vision project using OpenCV.
 
+Version *1.10* screenshot [http://www.nickdademo.com/qt-opencv-multithreaded-1.10.png here] (showing processing settings dialog).
+
 Version *1.00* screenshot [http://www.nickdademo.com/qt-opencv-multithreaded-1.00.png here].
 
 = 2. Installation =
