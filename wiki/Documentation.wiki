@@ -138,7 +138,7 @@ The default frame rate can be changed by simply modifying the driver source (_ov
 
 1. *After downloading and unpacking the bz2/zip/gz archive containing the latest V4L module, navigate to the created folder in Terminal, then:*
 {{{
-$ sudo gedit v4l/ov534.c
+$ sudo gedit linux/drivers/media/video/gspca/ov534.c
 }}}
 
 2. *Find the set_frame_rate() function and within the two structure of structures initializations (rate_0 and rate_1), simply comment out all the options except the one which you would like to use. For example, in the case of 60fps @ 640x480:
