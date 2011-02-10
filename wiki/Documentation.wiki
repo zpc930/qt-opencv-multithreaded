@@ -164,3 +164,5 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 3. *Save and close _ov534.c_ and then follow the make and install steps above.*
 
 4. *Your chosen frame rate should now be the default when using the PS3 Eye with OpenCV!*
+
+*Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
