@@ -122,7 +122,7 @@ $ cd media_build
 $ ./build.sh
 }}}
 
-3. *Optional Step: See "Changing the frame rate" below.*
+3. *Optional Step:* See *Changing the frame rate* below.
 
 4. *Install module:*
 {{{
@@ -133,7 +133,7 @@ After updating the V4L module as described above (without the optional Step 3), 
 
 ===(Optional) Changing the frame rate===
 
-The default frame rate can be changed by simply modifying the driver source (_ov534.c_) after *Step 2* and then re-building and installing the V4L module as described above.
+The default frame rate can be changed by simply modifying and re-building the driver source (_ov534.c_) after *Step 2* and then installing the V4L module as described above in *Step 4*.
 
 *Note:* The below procedure only works if you are changing to settings with a resolution of *640x480* (i.e. with possible frame rates of 15fps, 30fps, 40fps, 50fps, 60fps).
 
