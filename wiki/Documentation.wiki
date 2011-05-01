@@ -109,39 +109,40 @@ Coming soon.
 Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
 
 == 5.1 Playstation Eye ==
-If you encounter flickering issues when the PS3 Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module available at: [http://linuxtv.org/hg/v4l-dvb/]
+If you encounter flickering issues when the PS3 Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
 
-1. *Unpack downloaded bz2/zip/gz archive and navigate to the created folder in Terminal, then:*
+1. *In Terminal:*
 {{{
-$ sudo make
+$ git clone git://linuxtv.org/media_build.git
 }}}
 
-2. *After successful `make`:*
+2. *Navigate to downloaded folder and build source:*
+{{{
+$ cd media_build
+$ ./build.sh
+}}}
+
+3. *Optional Step: See "Changing the frame rate" below.*
+
+4. *Install module:*
 {{{
 $ sudo make install
 }}}
 
-*Note:* If you encounter make errors, please do the following *AFTER* an unsuccessful build (*v4l* is a folder in the unpacked v4l-dvb archive):
-{{{
-$ sudo gedit v4l/.config
-}}}
-
-Change line: *CONFIG_DVB_FIREDTV=m* to *CONFIG_DVB_FIREDTV=n*, save, then `make` and install again. Restart Ubuntu after successful installation.
-
-After updating the V4L module as described above, the default settings for the PS3 Eye will be *30fps @ 640x480*.
+After updating the V4L module as described above (without the optional Step 3), the default settings for the PS3 Eye will be *30fps @ 640x480*.
 
 ===(Optional) Changing the frame rate===
 
-The default frame rate can be changed by simply modifying the driver source (_ov534.c_) *before* building and installing the V4L module as described above.
+The default frame rate can be changed by simply modifying the driver source (_ov534.c_) after *Step 2* and then re-building and installing the V4L module as described above.
 
 *Note:* The below procedure only works if you are changing to settings with a resolution of *640x480* (i.e. with possible frame rates of 15fps, 30fps, 40fps, 50fps, 60fps).
 
-1. *After downloading and unpacking the bz2/zip/gz archive containing the latest V4L module, navigate to the created folder in Terminal, then:*
+3a. *Open the source file:*
 {{{
 $ sudo gedit linux/drivers/media/video/gspca/ov534.c
 }}}
 
-2. *Find the set_frame_rate() function and within the two structure of structures initializations (rate_0 and rate_1), simply comment out all the options except the one which you would like to use. For example, in the case of 60fps @ 640x480:
+3b. *Find the set_frame_rate() function and within the two structure of structures initializations (rate_0 and rate_1), simply comment out all the options except the one which you would like to use. For example, in the case of 60fps @ 640x480:
 {{{
 static const struct rate_s rate_0[] = {	/* 640x480 */
 	{60, 0x01, 0xc1, 0x04},
@@ -161,8 +162,11 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 };
 }}}
 
-3. *Save and close _ov534.c_ and then follow the make and install steps above.*
+3c. *Save and close _ov534.c_ and then rebuild the source. In Terminal:*
+{{{
+$ sudo make
+}}}
 
-4. *Your chosen frame rate should now be the default when using the PS3 Eye with OpenCV!*
+3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the PS3 Eye with OpenCV!*
 
 *Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
