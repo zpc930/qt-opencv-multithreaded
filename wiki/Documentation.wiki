@@ -100,11 +100,11 @@ LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_vid
 6. *Your Qt-based OpenCV project can now be built and run using Qt Creator!*
 
 == 2.3 Compiling & running the application ==
-1. Download the latest stable release of *qt-opencv-multithreaded*: [http://code.google.com/p/qt-opencv-multithreaded/downloads/list Downloads]
+1. Download the latest stable release of *qt-opencv-multithreaded* and unpack the downloaded archive: [http://code.google.com/p/qt-opencv-multithreaded/downloads/list Downloads]
 
 *OR*
 
-Get the "cutting-edge" version from the SVN repository [requires a SVN client]: See instructions [http://code.google.com/p/qt-opencv-multithreaded/source/checkout here].
+Get the "cutting-edge" version from the SVN repository (requires a SVN client): See instructions [http://code.google.com/p/qt-opencv-multithreaded/source/checkout here].
 
 2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project targets - modify if required and click "Finish".
 
