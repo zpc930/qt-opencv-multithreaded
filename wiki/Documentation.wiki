@@ -57,7 +57,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 
 7. *Compile and install OpenCV:*
 {{{
-$sudo make install
+$ sudo make install
 }}}
 
 8. *Point system to generated libraries (change path if different):*
