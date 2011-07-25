@@ -93,7 +93,7 @@ LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_vid
 
 *OR*, if `pkg-config` is being used:
 {{{
-LIBS += ``pkg-config opencv --cflags --libs``
+LIBS += `pkg-config opencv --cflags --libs`
 }}}
 
 5. *Include the OpenCV header files in your C/C++ source file(s). For example:*
@@ -197,7 +197,7 @@ _Tested with ARToolKitPlus 2.2.1_
 
 2. *Open Terminal:* Applications->Accessories->Terminal
 
-3. *Unpack and install*:
+3. *Unpack and install (default installation path is /usr/)*:
 {{{
 $ cd Downloads
 $ tar xvjf ARToolKitPlus-2.2.1.tar.bz2
