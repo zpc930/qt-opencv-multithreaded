@@ -19,7 +19,7 @@ Version *1.12* screenshot [http://www.nickdademo.com/wp-content/uploads/2011/02/
 The installation procedures detailed below have been tested and verified using:
   * Ubuntu 10.04.3 LTS ("fresh" install)
   * OpenCV 2.3.0
-  * Qt 4.7.0 SDK for Linux/X11 32-bit
+  * Qt SDK version 1.1.2 for Linux/X11 32-bit
 == 2.1 Installing OpenCV ==
 1. *Open Terminal:* Applications->Accessories->Terminal
 
@@ -66,7 +66,7 @@ $ export LD_LIBRARY_PATH=~/Downloads/OpenCV-2.3.0/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
-9. *(Optional Step) Use `pkg-config` to simplify the making/building of your OpenCV projects:*
+9. *(Optional) Use `pkg-config` to simplify the "making/building" of your OpenCV projects:*
 {{{
 $ pkg-config opencv --libs
 }}}
