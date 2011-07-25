@@ -91,6 +91,11 @@ $ sudo apt-get install qt4-designer
 LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann
 }}}
 
+*OR*, if `pkg-config` is being used:
+{{{
+LIBS += ``pkg-config opencv --cflags --libs``
+}}}
+
 5. *Include the OpenCV header files in your C/C++ source file(s). For example:*
 {{{
 #include <opencv/cv.h>
