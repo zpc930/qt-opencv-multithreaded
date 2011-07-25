@@ -127,12 +127,12 @@ Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of suppo
 == 5.1 Playstation Eye ==
 If you encounter flickering issues when the PS3 Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
 
-1. *In Terminal:*
+1. *In Terminal (requires GIT):*
 {{{
 $ git clone git://linuxtv.org/media_build.git
 }}}
 
-2. *Navigate to downloaded folder and build source:*
+2. *Navigate to downloaded folder and build source (install required dependencies if prompted):*
 {{{
 $ cd media_build
 $ ./build.sh
@@ -197,7 +197,7 @@ _Tested with ARToolKitPlus 2.2.1_
 
 2. *Open Terminal:* Applications->Accessories->Terminal
 
-3. *Unpack and install (default installation path is /usr/)*:
+3. *Unpack and install (default system installation path is /usr/)*:
 {{{
 $ cd Downloads
 $ tar xvjf ARToolKitPlus-2.2.1.tar.bz2
