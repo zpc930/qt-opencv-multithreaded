@@ -7,6 +7,9 @@
   * [Documentation#4._Modifying_the_Source 4. Modifying the Source]
   * [Documentation#5._Hardware 5. Hardware]
     * [Documentation#5.1_Playstation_Eye 5.1 Playstation Eye]
+  * [Documentation#6._Extras 6. Extras]
+    * [Documentation#6.1_ARToolKitPlus_Installation 6.1 ARToolKitPlus Installation]
+
 
 = 1. Introduction =
 This relatively simple multithreaded application can be easily modified to suit the needs of your next Qt GUI-based computer vision project using OpenCV.
