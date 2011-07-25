@@ -222,3 +222,21 @@ LIBS += -lARToolKitPlus
 #include <ARToolKitPlus/TrackerSingleMarker.h>
 #include <ARToolKitPlus/TrackerMultiMarker.h>
 }}}
+
+== 6.2 QSerialDevice Installation ==
+
+1. *In Terminal (requires GIT):*
+{{{
+$ git clone git://gitorious.org/qserialdevice/qserialdevice.git
+}}}
+
+2. *Compile source:*
+{{{
+$ cd qserialdevice
+$ qmake BuildLibrary.pro
+$ make
+}}}
+
+Note: This requires `udev': {{{sudo apt-get install udev}}}
+
+3.
