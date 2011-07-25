@@ -66,11 +66,11 @@ $ export LD_LIBRARY_PATH=~/Downloads/OpenCV-2.3.0/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
-9. *(Optional) Use `pkg-config` to simplify the making/building of your OpenCV projects:*
+9. *(Optional Step) Use `pkg-config` to simplify the making/building of your OpenCV projects:*
 {{{
 $ pkg-config opencv --libs
 }}}
-OpenCV dependencies can now be linked with simply: `pkg-config opencv --cflags --libs`
+OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``
 
 10. *Restart Ubuntu to complete installation.*
 
