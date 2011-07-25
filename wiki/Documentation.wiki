@@ -193,7 +193,7 @@ $ sudo make
 
 _Tested with ARToolKitPlus 2.2.1_
 
-1. *Download the ARToolKitPlus tar.bz2 archive (e.g. to home/Downloads):* [https://launchpad.net/artoolkitplus from here].
+1. *Download the ARToolKitPlus tar.bz2 archive (e.g. to home/Downloads):* [https://launchpad.net/artoolkitplus from here]
 
 2. *Open Terminal:* Applications->Accessories->Terminal
 
@@ -201,9 +201,21 @@ _Tested with ARToolKitPlus 2.2.1_
 {{{
 $ cd Downloads
 $ tar xvjf ARToolKitPlus-2.2.1.tar.bz2
+$ cd ARToolKitPlus-2.2.1
 $ mkdir build
 $ cd build
 $ cmake ..
 $ make
 $ sudo make install
-}}} 
+}}}
+
+4. *Add the following to the Qt .PRO file:*
+{{{
+LIBS += -lARToolKitPlus
+}}}
+
+5. *Include the ARToolKitPlus header files in your C/C++ source file(s). For example:*
+{{{
+#include <ARToolKitPlus/TrackerSingleMarker.h>
+#include <ARToolKitPlus/TrackerMultiMarker.h>
+}}}
