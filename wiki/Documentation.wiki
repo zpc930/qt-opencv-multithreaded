@@ -196,7 +196,7 @@ $ sudo make
 
 _Tested with ARToolKitPlus 2.2.1_
 
-1. *Download the ARToolKitPlus tar.bz2 archive (e.g. to home/Downloads):* [https://launchpad.net/artoolkitplus from here]
+1. *Download the ARToolKitPlus tar.bz2 archive (e.g. to home/Downloads):* [https://launchpad.net/artoolkitplus ARToolKitPlus @ LaunchPad]
 
 2. *Open Terminal:* Applications->Accessories->Terminal
 
