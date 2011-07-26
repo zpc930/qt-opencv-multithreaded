@@ -237,8 +237,7 @@ $ qmake BuildLibrary.pro
 $ make
 }}}
 
-
-*Note:* This requires `udev`:
+*Note:* This step requires `udev`:
 {{{
 sudo apt-get install udev
 }}}
