@@ -128,7 +128,7 @@ Coming soon.
 Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
 
 == 5.1 Playstation Eye ==
-If you encounter flickering issues when the Sony PS3 PlayStation Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
+If you encounter flickering issues when the Sony PS3 Playstation Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
 
 1. *In Terminal (requires GIT):*
 {{{
@@ -148,7 +148,7 @@ $ ./build.sh
 $ sudo make install
 }}}
 
-After updating the V4L module as described above (without the optional Step 3), the default settings for the PlayStation Eye will be *30fps @ 640x480*.
+After updating the V4L module as described above (without the optional Step 3), the default settings for the Playstation Eye will be *30fps @ 640x480*.
 
 ===(Optional) Changing the frame rate===
 
@@ -186,7 +186,7 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 $ sudo make
 }}}
 
-3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the PlayStation Eye with OpenCV!*
+3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV!*
 
 *Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
 
