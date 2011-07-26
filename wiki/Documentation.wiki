@@ -239,7 +239,7 @@ $ make
 
 *Note:* This step requires `udev`:
 {{{
-sudo apt-get install udev
+sudo apt-get install libudev-dev
 }}}
 
 3. *Copy compiled static library to /usr/lib:*
