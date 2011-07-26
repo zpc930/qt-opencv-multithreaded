@@ -127,7 +127,7 @@ Coming soon.
 = 5. Hardware =
 Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
 
-== 5.1 PlayStation Eye ==
+== 5.1 Playstation Eye ==
 If you encounter flickering issues when the Sony PS3 PlayStation Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
 
 1. *In Terminal (requires GIT):*
