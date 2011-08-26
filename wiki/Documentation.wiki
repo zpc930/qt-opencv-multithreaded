@@ -138,7 +138,7 @@ $ git clone git://linuxtv.org/media_build.git
 2. *Navigate to downloaded folder and build source (install required dependencies if prompted):*
 {{{
 $ cd media_build
-$ ./build.sh
+$ ./build
 }}}
 
 3. *Optional Step:* See *Changing the frame rate* below.
