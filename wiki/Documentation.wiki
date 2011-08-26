@@ -141,7 +141,7 @@ $ cd media_build
 $ ./build
 }}}
 
-3. *Optional Step:* See *Changing the frame rate* below.
+3. *Optional Step:* See the optional *two* steps below.
 
 4. *Install module:*
 {{{
@@ -186,9 +186,51 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 $ sudo make
 }}}
 
-3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV!*
+3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV! (a restart may be required)*
 
 *Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
+
+===(Optional) Changing camera settings within OpenCV at run-time===
+Alternatively, instead of hard-coding a 640x480 _default_ frame rate as described above, it is possible to switch between TWO video modes within an OpenCV program at run-time. The required steps are as follows:
+
+3a. *Open the source file:*
+{{{
+$ sudo gedit linux/drivers/media/video/gspca/ov534.c
+}}}
+
+3b. *Modify ov534.c as follows (leaving ONE 640x480 frame rate and ONE 320x240 frame rate uncommented):
+{{{
+static const struct rate_s rate_0[] = {	/* 640x480 */
+	{60, 0x01, 0xc1, 0x04},
+	//{50, 0x01, 0x41, 0x02},
+	//{40, 0x02, 0xc1, 0x04},
+	//{30, 0x04, 0x81, 0x02},
+	//{15, 0x03, 0x41, 0x04},
+};
+static const struct rate_s rate_1[] = {	/* 320x240 */
+	{125, 0x02, 0x81, 0x02},
+	//{100, 0x02, 0xc1, 0x04},
+	//{75, 0x03, 0xc1, 0x04},
+	//{60, 0x04, 0xc1, 0x04},
+	//{50, 0x02, 0x41, 0x04},
+	//{40, 0x03, 0x41, 0x04},
+	//{30, 0x04, 0x41, 0x04},
+};
+}}}
+
+3c. You can now do the following in your OpenCV program to switch between the two modes:
+{{{
+/* Open default camera */
+VideoCapture cap(0);
+
+/* Switch to 320x240 frame rate (120fps) 
+cap.set(CV_CAP_PROP_FRAME_WIDTH,320);
+cap.set(CV_CAP_PROP_FRAME_WIDTH,240);
+
+/* Switch to 640x480 frame rate (60fps) */
+cap.set(CV_CAP_PROP_FRAME_WIDTH,640);
+cap.set(CV_CAP_PROP_FRAME_WIDTH,480);
+}}}
 
 = 6. Extras =
 
