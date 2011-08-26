@@ -186,7 +186,7 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 $ sudo make
 }}}
 
-3d. *After performing *Step 4* above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV! (a restart may be required)*
+3d. *After performing Step 4 above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV! (a restart may be required)*
 
 *Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
 
@@ -198,7 +198,7 @@ Alternatively, instead of hard-coding a 640x480 _default_ frame rate as describe
 $ sudo gedit linux/drivers/media/video/gspca/ov534.c
 }}}
 
-3b. *Modify ov534.c as follows (leaving ONE 640x480 frame rate and ONE 320x240 frame rate uncommented):
+3b. *Modify ov534.c as follows* (leaving ONE 640x480 frame rate and ONE 320x240 frame rate uncommented):
 {{{
 static const struct rate_s rate_0[] = {	/* 640x480 */
 	{60, 0x01, 0xc1, 0x04},
@@ -218,7 +218,7 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 };
 }}}
 
-3c. You can now do the following in your OpenCV program to switch between the two modes:
+3c. *After performing Step 4 above, you can now do the following in your OpenCV program to switch between the two modes:*
 {{{
 /* Open default camera */
 VideoCapture cap(0);
