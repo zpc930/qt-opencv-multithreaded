@@ -223,7 +223,7 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 /* Open default camera */
 VideoCapture cap(0);
 
-/* Switch to 320x240 frame rate (120fps) 
+/* Switch to 320x240 frame rate (120fps) */
 cap.set(CV_CAP_PROP_FRAME_WIDTH,320);
 cap.set(CV_CAP_PROP_FRAME_WIDTH,240);
 
