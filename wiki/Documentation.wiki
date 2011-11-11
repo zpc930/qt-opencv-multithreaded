@@ -65,7 +65,7 @@ $ sudo make install
 
 8. *Point system to generated libraries (change path if different):*
 {{{
-$ export LD_LIBRARY_PATH=~/Downloads/OpenCV-2.3.0/release/lib:$LD_LIBRARY_PATH
+$ export LD_LIBRARY_PATH=~/Downloads/OpenCV-2.3.1a/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
