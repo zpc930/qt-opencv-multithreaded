@@ -183,7 +183,7 @@ static const struct rate_s rate_1[] = {	/* 320x240 */
 
 3c. *Save and close _ov534.c_ and then rebuild the source. In Terminal:*
 {{{
-$ sudo make
+$ make
 }}}
 
 3d. *After performing Step 4 above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV! (a restart may be required)*
