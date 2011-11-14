@@ -128,109 +128,55 @@ Coming soon.
 Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
 
 == 5.1 Playstation Eye ==
-If you encounter flickering issues when the Sony PS3 Playstation Eye USB camera is used with OpenCV, please update your linux kernel with the latest V4L module:
+===Changing the frame rate===
 
-1. *In Terminal (requires GIT):*
+The default frame rate can be changed by modifying and re-building the driver source (_ov534.c_).
+
+Note: The following procedure is based on: http://wiki.tekkotsu.org/index.php/Sony_PlayStation_Eye_driver_install_instructions
+
+1. Get the Linux kernel source:
 {{{
-$ git clone git://linuxtv.org/media_build.git
+$ sudo -s
+$ cd /usr/src
+$ apt-get update
+$ apt-get install -y kernel-package build-essential linux-source
+$ tar --bzip2 -xvf linux-source-*.tar.bz2
+$ ln -s `find . -type d -name "linux-source-*"` linux
 }}}
 
-2. *Navigate to downloaded folder and build source (install required dependencies if prompted):*
+2. Replace the driver source. This version of the driver has been patched to make 640x480 @ 60 fps the default. 
 {{{
-$ cd media_build
-$ ./build
+$ cd /usr/src/linux/drivers/media/video/gspca
+$ mv ov534.c ov534.c.old
+$ wget http://
 }}}
 
-3. *Optional Step:* See the optional *two* steps below.
-
-4. *Install module:*
+3. Rebuild the driver modules _ov534_, _gspca_ov534_, and _gspca-main_:
 {{{
-$ sudo make install
+$ cd /usr/src
+$ cp -p linux-headers-$(uname -r)/Module.symvers linux
+
+$ cd /usr/src/linux
+$ make oldconfig
+$ make modules_prepare
+$ make SUBDIRS=drivers/media/video/gspca modules 
 }}}
 
-After updating the V4L module as described above (without the optional Step 3), the default settings for the Playstation Eye will be *30fps @ 640x480*.
-
-===(Optional) Changing the frame rate===
-
-The default frame rate can be changed by simply modifying and re-building the driver source (_ov534.c_) after *Step 2* and then installing the V4L module as described above in *Step 4*.
-
-*Note:* The below procedure only works if you are changing to settings with a resolution of *640x480* (i.e. with possible frame rates of 15fps, 30fps, 40fps, 50fps, 60fps).
-
-3a. *Open the source file:*
+4. Install the new _gspca_ov534_ driver, which also requires replacing _gspca_main_:
 {{{
-$ sudo gedit linux/drivers/media/video/gspca/ov534.c
+$ cd /usr/src/linux
+$ cp -p drivers/media/video/gspca/gspca_main.ko /lib/modules/$(uname -r)/kernel/drivers/media/video/gspca
+$ cp -p drivers/media/video/gspca/gspca_ov534.ko /lib/modules/$(uname -r)/kernel/drivers/media/video/gspca
+$ depmod
 }}}
 
-3b. *Find the set_frame_rate() function and within the two structure of structures initializations (rate_0 and rate_1), simply comment out all the options except the one which you would like to use. For example, in the case of 60fps @ 640x480:
+5. Remove the old drivers, then load the new ones (_gspca_main_ will load automatically):
 {{{
-static const struct rate_s rate_0[] = {	/* 640x480 */
-	{60, 0x01, 0xc1, 0x04},
-	//{50, 0x01, 0x41, 0x02},
-	//{40, 0x02, 0xc1, 0x04},
-	//{30, 0x04, 0x81, 0x02},
-	//{15, 0x03, 0x41, 0x04},
-};
-static const struct rate_s rate_1[] = {	/* 320x240 */
-	//{125, 0x02, 0x81, 0x02},
-	//{100, 0x02, 0xc1, 0x04},
-	//{75, 0x03, 0xc1, 0x04},
-	//{60, 0x04, 0xc1, 0x04},
-	//{50, 0x02, 0x41, 0x04},
-	//{40, 0x03, 0x41, 0x04},
-	//{30, 0x04, 0x41, 0x04},
-};
+modprobe -r gspca_ov534 gspca_main
+modprobe gspca_ov534
 }}}
 
-3c. *Save and close _ov534.c_ and then rebuild the source. In Terminal:*
-{{{
-$ make
-}}}
-
-3d. *After performing Step 4 above, your chosen frame rate should now be the default when using the Playstation Eye with OpenCV! (a restart may be required)*
-
-*Note:* The modified driver must be re-installed (i.e. the above procedure must be repeated) if you update your Linux kernel.
-
-===(Optional) Changing camera settings within OpenCV at run-time===
-Alternatively, instead of hard-coding a 640x480 _default_ frame rate as described above, it is possible to switch between TWO video modes within an OpenCV program at run-time. The required steps are as follows:
-
-3a. *Open the source file:*
-{{{
-$ sudo gedit linux/drivers/media/video/gspca/ov534.c
-}}}
-
-3b. *Modify ov534.c as follows* (leaving ONE 640x480 frame rate and ONE 320x240 frame rate uncommented):
-{{{
-static const struct rate_s rate_0[] = {	/* 640x480 */
-	{60, 0x01, 0xc1, 0x04},
-	//{50, 0x01, 0x41, 0x02},
-	//{40, 0x02, 0xc1, 0x04},
-	//{30, 0x04, 0x81, 0x02},
-	//{15, 0x03, 0x41, 0x04},
-};
-static const struct rate_s rate_1[] = {	/* 320x240 */
-	{125, 0x02, 0x81, 0x02},
-	//{100, 0x02, 0xc1, 0x04},
-	//{75, 0x03, 0xc1, 0x04},
-	//{60, 0x04, 0xc1, 0x04},
-	//{50, 0x02, 0x41, 0x04},
-	//{40, 0x03, 0x41, 0x04},
-	//{30, 0x04, 0x41, 0x04},
-};
-}}}
-
-3c. *After performing Step 4 above, you can now do the following in your OpenCV program to switch between the two modes:*
-{{{
-/* Open default camera */
-VideoCapture cap(0);
-
-/* Switch to 320x240 frame rate (120fps) */
-cap.set(CV_CAP_PROP_FRAME_WIDTH,320);
-cap.set(CV_CAP_PROP_FRAME_HEIGHT,240);
-
-/* Switch to 640x480 frame rate (60fps) */
-cap.set(CV_CAP_PROP_FRAME_WIDTH,640);
-cap.set(CV_CAP_PROP_FRAME_HEIGHT,480);
-}}}
+6. Test using _qt-opencv-multithreaded_.
 
 = 6. Extras =
 
