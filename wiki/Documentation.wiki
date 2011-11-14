@@ -148,7 +148,7 @@ $ ln -s `find . -type d -name "linux-source-*"` linux
 {{{
 $ cd /usr/src/linux/drivers/media/video/gspca
 $ mv ov534.c ov534.c.old
-$ wget http://
+$ wget http://qt-opencv-multithreaded.googlecode.com/files/ov534.c
 }}}
 
 3. Rebuild the driver modules _ov534_, _gspca_ov534_, and _gspca-main_:
