@@ -176,9 +176,9 @@ modprobe -r gspca_ov534 gspca_main
 modprobe gspca_ov534
 }}}
 
-_*Note:* This patched driver appears to suffer from flickering issues during heavy image processing. If anyone knows a fix, please let me know._
-
 6. Test using _qt-opencv-multithreaded_.
+
+_*Note:* This patched driver appears to suffer from flickering issues during heavy image processing. If anyone knows a fix, please let me know._
 
 = 6. Extras =
 
