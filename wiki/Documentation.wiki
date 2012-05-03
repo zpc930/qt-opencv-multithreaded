@@ -14,7 +14,7 @@
 The installation procedures detailed below have been tested and verified using:
   * Ubuntu 12.04 LTS ("fresh" install)
   * OpenCV 2.4.0
-  * Qt SDK version 1.2 for Linux/X11 32-bit
+  * Qt SDK version 1.2.1 for Linux/X11 32-bit
 == 1.1 Installing OpenCV ==
 1. *Open Terminal:* Press Control-Alt T to open a Terminal instance.
 
