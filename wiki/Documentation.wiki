@@ -18,13 +18,15 @@ The installation procedures detailed below have been tested and verified using:
 == 1.1 Installing OpenCV ==
 1. *Open Terminal:* Press Control-Alt T to open a Terminal instance.
 
-2. *Download and install CMake and other required dependencies (Note: `pkg-config` should already be supplied with Ubuntu):*
+2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L):*
 {{{
 $ sudo apt-get update
-$ sudo apt-get install build-essential cmake pkg-config
+$ sudo apt-get install build-essential cmake libv4l-dev
 }}}
 
 *Optional packages:*
+
+`pkg-config` _*See Step 9*_
 
 `libgtk2.0-dev` _The default GUI backend for highgui on OSes other than Windows and MacOSX._
 
@@ -196,13 +198,12 @@ _*Note:* This patched driver seems to suffer from flickering issues during heavy
 
 _Tested with ARToolKitPlus 2.2.1_
 
-1. *Download the ARToolKitPlus tar.bz2 archive (e.g. to home/Downloads):* [https://launchpad.net/artoolkitplus ARToolKitPlus @ Launchpad]
+1. *Open Terminal:* Applications->Accessories->Terminal
 
-2. *Open Terminal:* Applications->Accessories->Terminal
-
-3. *Unpack and install (default system installation path is /usr/)*:
+2. *Download ARToolKitPlus, unpack and install (default system installation path is /usr/)*:
 {{{
 $ cd Downloads
+$ wget https://launchpad.net/artoolkitplus/trunk/2.2.1/+download/ARToolKitPlus-2.2.1.tar.bz2
 $ tar xvjf ARToolKitPlus-2.2.1.tar.bz2
 $ cd ARToolKitPlus-2.2.1
 $ mkdir build
@@ -212,12 +213,12 @@ $ make
 $ sudo make install
 }}}
 
-4. *Add the following to the Qt .PRO file:*
+3. *Add the following to the Qt .PRO file:*
 {{{
 LIBS += -lARToolKitPlus
 }}}
 
-5. *Include the ARToolKitPlus header files in your C/C++ source file(s). For example:*
+4. *Include the ARToolKitPlus header files in your C/C++ source file(s). For example:*
 {{{
 #include <ARToolKitPlus/TrackerSingleMarker.h>
 #include <ARToolKitPlus/TrackerMultiMarker.h>
