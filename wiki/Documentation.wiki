@@ -5,7 +5,7 @@
   * [Documentation#2._Using_the_Application 2. Using the Application]
   * [Documentation#3._Modifying_the_Source 3. Modifying the Source]
   * [Documentation#4._Hardware 4. Hardware]
-    * [Documentation#5.1_Playstation_Eye 5.1 PlayStation Eye]
+    * [Documentation#4.1_Playstation_Eye 4.1 PlayStation Eye]
   * [Documentation#5._Extras 5. Extras]
     * [Documentation#5.1_ARToolKitPlus_Installation 5.1 ARToolKitPlus Installation]
     * [Documentation#5.2_QSerialDevice_Installation 5.2 QSerialDevice Installation]
