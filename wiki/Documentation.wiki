@@ -190,8 +190,6 @@ modprobe gspca_ov534
 
 6. Test using _qt-opencv-multithreaded_.
 
-_*Note:* This patched driver seems to suffer from flickering issues during heavy image processing. If using qt-opencv-multithreaded, select "Drop frame if image buffer is full" when connecting to the camera to eliminate this problem. If anyone knows a driver fix, please let me know._
-
 = 5. Extras =
 
 == 5.1 ARToolKitPlus Installation ==
