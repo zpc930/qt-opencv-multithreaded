@@ -80,13 +80,7 @@ $ export LD_LIBRARY_PATH=~/Downloads/opencv-2.4.4/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
-9. *Use `pkg-config` to simplify the "making/building" of your OpenCV projects:*
-{{{
-$ pkg-config opencv --libs
-}}}
-OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``
-
-10. *Restart Ubuntu to complete installation.*
+9. *Restart Ubuntu to complete installation. OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``*
 
 == 1.2 Installing Qt ==
 *Note:* Steps 5 and 6 explain how to configure Qt Creator for use with the OpenCV libraries.
