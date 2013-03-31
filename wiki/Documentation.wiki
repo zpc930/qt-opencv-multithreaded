@@ -21,12 +21,10 @@ The installation procedures detailed below have been tested and verified using:
 2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L):*
 {{{
 $ sudo apt-get update
-$ sudo apt-get install build-essential cmake libv4l-dev
+$ sudo apt-get install build-essential cmake libv4l-dev pkg-config
 }}}
 
 *Optional packages:*
-
-`pkg-config` _*See Step 9*_
 
 `libgtk2.0-dev` _The default GUI backend for highgui on OSes other than Windows and MacOSX._
 
@@ -82,7 +80,7 @@ $ export LD_LIBRARY_PATH=~/Downloads/opencv-2.4.4/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
-9. *(Optional) Use `pkg-config` to simplify the "making/building" of your OpenCV projects:*
+9. *Use `pkg-config` to simplify the "making/building" of your OpenCV projects:*
 {{{
 $ pkg-config opencv --libs
 }}}
@@ -109,11 +107,6 @@ $ sudo apt-get install qt4-designer
 4. *Restart Ubuntu to complete installation.*
 
 5. *In Qt Creator, add the following to the .PRO file after creating a project:*
-{{{
-LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann
-}}}
-
-*OR*, if `pkg-config` is being used:
 {{{
 LIBS += `pkg-config opencv --cflags --libs`
 }}}
