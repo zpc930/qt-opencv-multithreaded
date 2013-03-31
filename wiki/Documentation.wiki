@@ -133,9 +133,15 @@ LIBS += `pkg-config opencv --cflags --libs`
 
 Get the "cutting-edge" version from the SVN repository (requires a SVN client): See instructions [http://code.google.com/p/qt-opencv-multithreaded/source/checkout here].
 
-2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project targets - modify if required and click "Finish".
+2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project targets - modify if required.
 
 3. The application can be now be simply modified, compiled and run within Qt Creator!
+
+*IMPORTANT: If you receive compilation/linking errors such as `/usr/bin/ld: cannot find -lGL` or `GL/gl.h: No such file or directory` when using Qt 5, do the following:*
+{{{
+$ sudo apt-get install libgl1-mesa-dev
+}}}
+
 
 = 2. Using the Application =
 Coming soon.
