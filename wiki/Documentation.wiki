@@ -95,7 +95,11 @@ OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags 
 
 1. *Download the latest version of Qt 5.0 for Linux 32-bit from the Qt website:* [http://qt-project.org/downloads]
 
-2. *Follow the installation instructions on the download page.*
+2. *Follow the installation instructions on the download page. Installation is typically started with the following:*
+{{{
+$ chmod u+x path_to_downloaded_setup_file
+$ ./path_to_downloaded_setup_file
+}}}
 
 3. *(Optional) Install Qt Designer (used for GUI designing).*
 {{{
