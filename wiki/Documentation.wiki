@@ -133,7 +133,7 @@ LIBS += `pkg-config opencv --cflags --libs`
 
 Get the "cutting-edge" version from the SVN repository (requires a SVN client): See instructions [http://code.google.com/p/qt-opencv-multithreaded/source/checkout here].
 
-2. Unpack the downloaded archive and open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project targets - modify if required.
+2. Open *qt-opencv-multithreaded.pro* in Qt Creator. You may also be asked to setup the project build targets - modify if required.
 
 3. The application can be now be simply modified, compiled and run within Qt Creator!
 
