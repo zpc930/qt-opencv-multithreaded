@@ -85,7 +85,7 @@ $ sudo ldconfig
 == 1.2 Installing Qt ==
 *Note:* Steps 5 and 6 explain how to configure Qt Creator for use with the OpenCV libraries.
 
-1. *Download the latest version of Qt 5.0 for Linux 32-bit from the Qt website:* [http://qt-project.org/downloads]
+1. *Download the latest version of Qt 5 for Linux 32-bit from the Qt website:* [http://qt-project.org/downloads]
 
 2. *Follow the installation instructions on the download page. Installation is typically started with the following:*
 {{{
