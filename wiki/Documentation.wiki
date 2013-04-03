@@ -18,7 +18,7 @@ The installation procedures detailed below have been tested and verified using:
 == 1.1 Installing OpenCV ==
 1. *Open Terminal:* Press Control-Alt T to open a Terminal instance.
 
-2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L):*
+2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L. Also, Ubuntu 13.04 comes supplied with `pkg-config`):*
 {{{
 $ sudo apt-get update
 $ sudo apt-get install build-essential cmake libv4l-dev pkg-config
@@ -194,16 +194,16 @@ modprobe gspca_ov534
 
 == 5.1 ARToolKitPlus Installation ==
 
-_Tested with ARToolKitPlus 2.2.1_
+_Tested with ARToolKitPlus 2.3.0_
 
-1. *Open Terminal:* Applications->Accessories->Terminal
+1. *Open Terminal:* Press Control-Alt T to open a Terminal instance.
 
 2. *Download ARToolKitPlus, unpack and install (default system installation path is /usr/)*:
 {{{
 $ cd Downloads
-$ wget https://launchpad.net/artoolkitplus/trunk/2.2.1/+download/ARToolKitPlus-2.2.1.tar.bz2
-$ tar xvjf ARToolKitPlus-2.2.1.tar.bz2
-$ cd ARToolKitPlus-2.2.1
+$ wget https://launchpad.net/artoolkitplus/trunk/2.3.0/+download/ARToolKitPlus-2.3.0.tar.bz2
+$ tar xvjf ARToolKitPlus-2.3.0.tar.bz2
+$ cd ARToolKitPlus-2.3.0
 $ mkdir build
 $ cd build
 $ cmake ..
