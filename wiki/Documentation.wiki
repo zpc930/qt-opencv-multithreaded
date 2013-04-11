@@ -8,7 +8,6 @@
     * [Documentation#4.1_Playstation_Eye 4.1 PlayStation Eye]
   * [Documentation#5._Extras 5. Extras]
     * [Documentation#5.1_ARToolKitPlus_Installation 5.1 ARToolKitPlus Installation]
-    * [Documentation#5.2_QSerialDevice_Installation 5.2 QSerialDevice Installation]
 
 = 1. Installation =
 The installation procedures detailed below have been tested and verified using:
@@ -220,52 +219,4 @@ LIBS += -lARToolKitPlus
 {{{
 #include <ARToolKitPlus/TrackerSingleMarker.h>
 #include <ARToolKitPlus/TrackerMultiMarker.h>
-}}}
-
-== 5.2 QSerialDevice Installation ==
-
-1. *In Terminal (requires GIT):*
-{{{
-$ git clone git://gitorious.org/qserialdevice/qserialdevice.git
-}}}
-
-2. *Compile source:*
-
-*Note:* This step requires `udev`:
-{{{
-sudo apt-get install libudev-dev
-}}}
-
-{{{
-$ cd qserialdevice
-$ qmake BuildLibrary.pro
-$ make
-}}}
-
-3. *Copy compiled static library to /usr/lib:*
-{{{
-$ cd src/build/release
-$ sudo cp libqserialdevice.a /usr/lib
-}}}
-
-4. *Copy header files to /usr/include/qserialdevice:*
-{{{
-$ sudo mkdir /usr/include/qserialdevice
-$ cd ../../qserialdevice
-$ sudo cp * /usr/include/qserialdevice
-}}}
-
-5. *Copy global header file to /usr/include:*
-{{{
-cd .. && sudo cp qserialdevice_global.h /usr/include/
-}}}
-
-6. *Add the following to the Qt .PRO file:*
-{{{
-LIBS += -lqserialdevice
-}}}
-
-7. *Include the following header file to your C/C++ source file(s):*
-{{{
-#include <qserialdevice/abstractserial.h>
 }}}
