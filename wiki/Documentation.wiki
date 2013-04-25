@@ -81,7 +81,7 @@ $ export LD_LIBRARY_PATH=~/Downloads/opencv-2.4.5/release/lib:$LD_LIBRARY_PATH
 $ sudo ldconfig
 }}}
 
-9. *Restart Ubuntu to complete installation. OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``*
+9. *OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``*
 
 == 1.2 Installing Qt ==
 *Note:* Steps 4 and 5 explain how to configure Qt Creator for use with the OpenCV libraries.
@@ -94,20 +94,18 @@ $ chmod u+x path_to_downloaded_setup_file
 $ ./path_to_downloaded_setup_file
 }}}
 
-3. *Restart Ubuntu to complete installation.*
-
-4. *In Qt Creator, add the following to the .PRO file after creating a project:*
+3. *In Qt Creator, add the following to the .PRO file after creating a project:*
 {{{
 LIBS += `pkg-config opencv --cflags --libs`
 }}}
 
-5. *Include the OpenCV header files in your C/C++ source file(s). For example:*
+4. *Include the OpenCV header files in your C/C++ source file(s). For example:*
 {{{
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
 }}}
 
-6. *Your Qt-based OpenCV project can now be built and run using Qt Creator!*
+5. *Your Qt-based OpenCV project can now be built and run using Qt Creator!*
 
 == 1.3 Compiling & running the application ==
 1. Download the latest stable release of *qt-opencv-multithreaded* and unpack the downloaded archive: [http://code.google.com/p/qt-opencv-multithreaded/downloads/list Downloads]
