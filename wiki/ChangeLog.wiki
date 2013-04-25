@@ -1,11 +1,13 @@
 #summary Description of changes between stable releases.
 
-= v1.3.0 =
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= v1.3.0 (3rd April 2013) =
+  * New features:
+    * Application now supports simultaneous capturing and processing from multiple cameras.
+    * Display of number of frames processed.
+  * Code completely re-structured (and redundant code removed).
+  * Code is fully compatible/compilable with Qt 5.
 
-= v1.21 =
+= v1.21 (3rd February 2012) =
   * New features:
     * Capture and processing thread priority can be chosen at run-time.
     * Option to drop frame if image/frame buffer is full.
@@ -16,13 +18,20 @@
     * Setting/resetting the ROI does now not cause a frame to be skipped from processing.
     * Camera connect and disconnect methods have been simplified.
 
-= v1.20 =
+= v1.20 (12th July 2011) =
+  * Utilizes the new OpenCV 2.x C++ API.
+  * After setting a ROI, the resulting region is now centered in the display frame.
+  * Minor code restructuring/cleanup.
 
-= v1.12 =
+= v1.12 (23rd February 2011) =
+  * Method of setting/resetting ROI on mouse events changed.
 
-= v1.11 =
+= v1.11 (8th February 2011) =
+  * Processing settings dialog has been changed to a more compact tabbed-dialog.
 
-= v1.10 =
+= v1.10 (30th January 2011) =
+  * Processing settings can now be changed during runtime.
+  * All drawing when setting the ROI is now performed using QPainter instead of OpenCV's cvRectangle().
 
-= v1.00 =
-  * First release
+= v1.00 (19th January 2011) =
+  * First release.
