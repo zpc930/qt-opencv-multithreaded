@@ -1,0 +1,28 @@
+#summary Description of changes between stable releases.
+
+= v1.3.0 =
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= v1.21 =
+  * New features:
+    * Capture and processing thread priority can be chosen at run-time.
+    * Option to drop frame if image/frame buffer is full.
+    * Display of the cursor position relative to the ROI.
+  * GUI re-arranged and neatened.
+  * Minor code restructuring/cleanup:
+    * Method of setting/resetting ROI has been simplified.
+    * Setting/resetting the ROI does now not cause a frame to be skipped from processing.
+    * Camera connect and disconnect methods have been simplified.
+
+= v1.20 =
+
+= v1.12 =
+
+= v1.11 =
+
+= v1.10 =
+
+= v1.00 =
+  * First release
