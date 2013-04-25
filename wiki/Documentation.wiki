@@ -1,3 +1,5 @@
+#summary Installation and usage instructions.
+
   * [Documentation#1._Installation 1. Installation]
     * [Documentation#1.1_Installing_OpenCV 1.1 Installing OpenCV]
     * [Documentation#1.2_Installing_Qt 1.2 Installing Qt]
