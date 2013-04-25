@@ -15,7 +15,7 @@
   * GUI re-arranged and neatened.
   * Minor code restructuring/cleanup:
     * Method of setting/resetting ROI has been simplified.
-    * Setting/resetting the ROI does now not cause a frame to be skipped from processing.
+    * Setting/resetting the ROI does now *not* cause a frame to be skipped from processing.
     * Camera connect and disconnect methods have been simplified.
 
 = v1.20 (12th July 2011) =
