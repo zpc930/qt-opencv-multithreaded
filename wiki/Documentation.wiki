@@ -130,8 +130,6 @@ Coming soon.
 Coming soon.
 
 = 4. Hardware =
-Please see the [http://opencv.willowgarage.com/ OpenCV] site for a list of supported cameras.
-
 == 4.1 Playstation Eye ==
 ===Changing the frame rate===
 
