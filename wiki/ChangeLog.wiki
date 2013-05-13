@@ -6,8 +6,7 @@
     * UI: Moved number of frames processed label to be next to FPS label.
     * Stream synchronization: Multiple streams can be processed in sync on a frame-by-frame basis.
     * Shared image buffer: Allows threads access to image buffers from other streams.
-    * (Related to previous) Frame processing can be disabled per stream. This allows
-a ProcessingThread to grab (and process) frames from multiple streams.
+    * (Related to previous) Frame processing can be disabled per stream. This allows a ProcessingThread to grab (and process) frames from multiple streams.
   * All references to cameraID in source code removed. A stream is now uniquely identified by the Device Number (i.e. the device number of the connected camera).
   * Statistics information from both the processing and capture threads now uses a dedicated signal/slot with a common structure to hold the data.
 
