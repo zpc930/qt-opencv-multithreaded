@@ -1,16 +1,16 @@
 #summary Description of changes between stable releases.
 
 = v1.3.2 (24th July 2013) =
-* NEW FEATURE: Resolution can optionally be set (via OpenCV call) when connecting to the camera.
-* BUGFIX: Fixed bug on stream disconnect which caused frame processing to occur in other opened streams in a sync wait-state.
-* BUGFIX: Added wakeAll() call to allow camera to disconnect if in a wait-state.
-* Capture thread now checks if a frame is available before grabbing.
-* Processing thread optimized to have less conditional checks during image processing.
-* Renamed "Exit" menu item to "Quit".
-* CameraView objects are now stored in an accessible map in MainWindow.
-* ImageBuffer is now derived from a Buffer template class.
-* Changed CameraView from QMainWindow to QWidget (for Mac OS/X compatibility reasons).
-* Removed menu from CameraView and replaced with context menu which appears on right-click of frame.
+  * NEW FEATURE: Resolution can optionally be set (via OpenCV call) when connecting to the camera.
+  * BUGFIX: Fixed bug on stream disconnect which caused frame processing to occur in other opened streams in a sync wait-state.
+  * BUGFIX: Added wakeAll() call to allow camera to disconnect if in a wait-state.
+  * Capture thread now checks if a frame is available before grabbing.
+  * Processing thread optimized to have less conditional checks during image processing.
+  * Renamed "Exit" menu item to "Quit".
+  * CameraView objects are now stored in an accessible map in MainWindow.
+  * ImageBuffer is now derived from a Buffer template class.
+  * Changed CameraView from QMainWindow to QWidget (for Mac OS/X compatibility reasons).
+  * Removed menu from CameraView and replaced with context menu which appears on   right-click of frame.
 
 = v1.3.1 (13th May 2013) =
   * New features:
