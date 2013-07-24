@@ -10,7 +10,7 @@
   * `CameraView` objects are now stored in an accessible map in MainWindow.
   * `ImageBuffer` is now derived from a Buffer template class.
   * Changed `CameraView` from QMainWindow to QWidget (for Mac OS/X compatibility reasons).
-  * Removed menu from CameraView and replaced with context menu which appears on   right-click of frame.
+  * Removed menu from `CameraView` and replaced with context menu which appears on   right-click of frame.
 
 = v1.3.1 (13th May 2013) =
   * New features:
