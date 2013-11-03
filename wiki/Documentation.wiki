@@ -75,7 +75,7 @@ $ make
 $ sudo make install
 }}}
 
-8. *OpenCV runtime libraries (*.so) can now be linked with simply: ``pkg-config opencv --cflags --libs``*
+8. *OpenCV runtime libraries (*.so) can now be linked with simply: ``pkg-config opencv --libs``*
 
 == 1.2 Installing Qt ==
 *Note:* Steps 4 and 5 explain how to configure Qt Creator for use with the OpenCV libraries.
@@ -90,13 +90,22 @@ $ ./path_to_downloaded_setup_file
 
 3. *In Qt Creator, add the following to the .PRO file after creating a project:*
 {{{
-LIBS += `pkg-config opencv --cflags --libs`
+LIBS += `pkg-config opencv --libs`
 }}}
+
+OR (for Mac OS/X)
+
+{{{
+QT_CONFIG -= no-pkg-config
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv
+}}}
+
 
 4. *Include the OpenCV header files in your C/C++ source file(s). For example:*
 {{{
-#include <opencv/cv.h>
-#include <opencv/highgui.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui/highgui.hpp>
 }}}
 
 5. *Your Qt-based OpenCV project can now be built and run using Qt Creator!*
