@@ -75,7 +75,7 @@ $ make
 $ sudo make install
 }}}
 
-8. *OpenCV runtime libraries (*.so) can now be linked with simply: ``pkg-config opencv --libs``*
+8. *OpenCV runtime libraries (.so) can now be linked with simply: ``pkg-config opencv --libs``*
 
 == 1.2 Installing Qt ==
 *Note:* Steps 4 and 5 explain how to configure Qt Creator for use with the OpenCV libraries.
