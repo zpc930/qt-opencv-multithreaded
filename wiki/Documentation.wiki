@@ -61,7 +61,7 @@ $ mkdir release
 $ cd release
 }}}
 
-6. *Use CMake to generate the makefile:*
+6. *Use CMake to generate the makefile (add any other required flags with the -D option):*
 
 *Note:* Remember to specify the source folder as the last argument while invoking `cmake`.
 
@@ -75,13 +75,7 @@ $ make
 $ sudo make install
 }}}
 
-8. *Point system to generated libraries (change path if different):*
-{{{
-$ export LD_LIBRARY_PATH=~/Downloads/opencv-2.4.6.1/release/lib:$LD_LIBRARY_PATH
-$ sudo ldconfig
-}}}
-
-9. *OpenCV dependencies can now be linked with simply: ``pkg-config opencv --cflags --libs``*
+8. *OpenCV runtime libraries (*.so) can now be linked with simply: ``pkg-config opencv --cflags --libs``*
 
 == 1.2 Installing Qt ==
 *Note:* Steps 4 and 5 explain how to configure Qt Creator for use with the OpenCV libraries.
