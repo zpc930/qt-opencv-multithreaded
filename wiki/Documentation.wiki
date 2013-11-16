@@ -73,6 +73,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 {{{
 $ make
 $ sudo make install
+$ sudo ldconfig
 }}}
 
 8. *OpenCV runtime libraries (.so) can now be linked with simply: ``pkg-config opencv --libs``*
