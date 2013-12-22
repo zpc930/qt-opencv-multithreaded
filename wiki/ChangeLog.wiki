@@ -1,5 +1,13 @@
 #summary Description of changes between stable releases.
 
+= v1.3.3 (22nd December 2013) =
+  * NEW FEATURE: Application window can now be resized freely (image will scale accordingly).
+  * NEW FEATURE: Application can now handle any camera resolution (window size will auto adjust on connect).
+  * NEW FEATURE: Add menu item to toggle full screen on/off.
+  * Cursor display: value in square brackets now displays cursor "pixel coordinates".
+  * Increase smooth image operation kernel ranges.
+  * Increase dilate and erode no. of iteration ranges.
+
 = v1.3.2 (24th July 2013) =
   * NEW FEATURE: Resolution can optionally be set (via OpenCV call) when connecting to the camera.
   * BUGFIX: Fixed bug on stream disconnect which caused frame processing to occur in other opened streams in a sync wait-state.
