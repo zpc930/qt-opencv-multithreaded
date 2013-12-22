@@ -1,7 +1,7 @@
 #summary Description of changes between stable releases.
 
 = v1.3.3 (22nd December 2013) =
-  * NEW FEATURE: Application window can now be resized freely (image will scale accordingly).
+  * NEW FEATURE: Application window can now be resized freely (image will scale accordingly). UI has been re-arranged to support this feature.
   * NEW FEATURE: Application can now handle any camera resolution (window size will auto adjust on connect).
   * NEW FEATURE: Add menu item to toggle full screen on/off.
   * Cursor display: value in square brackets now displays cursor "pixel coordinates".
