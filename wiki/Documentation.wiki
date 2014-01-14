@@ -131,7 +131,7 @@ $ sudo apt-get install libgl1-mesa-dev
 Coming soon.
 
 = 3. Modifying the Source =
-<a href="https://qt-opencv-multithreaded.googlecode.com/svn/wiki/qt-opencv-multithreaded-1.3.2_RevA.png" target="_blank"><img src="https://qt-opencv-multithreaded.googlecode.com/svn/wiki/qt-opencv-multithreaded-1.3.2_RevA.png" width="817" height="561" /></a>
+<a href="https://qt-opencv-multithreaded.googlecode.com/svn/wiki/qt-opencv-multithreaded-1.3.3_RevA.png" target="_blank"><img src="https://qt-opencv-multithreaded.googlecode.com/svn/wiki/qt-opencv-multithreaded-1.3.3_RevA.png" width="817" height="561" /></a>
 
 = 4. Hardware =
 == 4.1 Playstation Eye ==
