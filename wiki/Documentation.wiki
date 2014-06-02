@@ -19,7 +19,7 @@ The installation procedures detailed below have been tested and verified using:
 == 1.1 Installing OpenCV ==
 1. *Open Terminal:* Press Control-Alt T to open a Terminal instance.
 
-2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L. Also, Ubuntu 13.04 comes supplied with `pkg-config`):*
+2. *Download and install CMake and other required dependencies (Note: `qt-opencv-multithreaded` requires V4L. Also, Ubuntu 14.04 comes supplied with `pkg-config`):*
 {{{
 $ sudo apt-get update
 $ sudo apt-get install build-essential cmake libv4l-dev pkg-config
